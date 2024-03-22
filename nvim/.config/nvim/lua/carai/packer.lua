@@ -60,4 +60,5 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'Olical/conjure'
   use 'nvim-orgmode/orgmode'
+  use 'github/copilot.vim'
 end)

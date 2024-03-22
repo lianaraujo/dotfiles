@@ -2,10 +2,9 @@
 
 # spaceship prompt
 
-TERMINAL=konsole
-
-autoload -U promptinit; promptinit
-prompt spaceship
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
+#autoload -U promptinit; promptinit
+#prompt spaceship
 
 # autocompletion
 
@@ -19,7 +18,7 @@ _comp_options+=(globdots)
 
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/zsh_history
 
 # general settings
 
@@ -49,10 +48,10 @@ fcd() {
 	cd "$(find -type d | fzf)"
 }
 
-open() {
-	argument="${1:-"$(find -type f | fzf)"}"
-	xdg-open "$argument"
-}
+#open() {
+#	argument="${1:-"$(find -type f | fzf)"}"
+#	xdg-open "$argument"
+#}
 
 extract () {
    if [ -f "$1" ] ; then
@@ -99,11 +98,12 @@ alias v="nvim"
 alias cfv="vim ~/.config/nvim/init.vim"
 alias cfz="nvim ~/.zshrc"
 alias cfh="nvim ~/.config/herbstluftwm/autostart"
+alias cfy="nvim ~/.config/yabai/yabairc"
+alias cfx="nvim ~/.config/skhd/skhdrc"
 alias cfp="nvim ~/.cache/plants/data"
 
 # cd alias
 
-alias btrfy="upower -i $(upower -e | grep 'BAT') | grep -E 'state|to\ full|percentage'"
 alias D="cd ~/Downloads"
 
 alias met="cd ~/docs/procs/metrobi/"
@@ -165,9 +165,8 @@ export GITHUB_PERSONAL_TOKEN="github_pat_11AQQSBAY0Ar8f620XLBnG_VakCvgeOJb1kJYDq
 
 # plugins
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zshfsh/fast-syntax-highlighting.plugin.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 fpath=($fpath "/home/diurno/.zfunctions")
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH=/home/diurno/.meteor:$PATH
