@@ -31,12 +31,14 @@ setopt interactive_comments
 export PATH="$PATH:$HOME/.local/src/flutter/bin"
 export PATH="$PATH:$HOME/src"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 #export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 #export PATH="$HOME/snap/dwarffortress/82:$PATH"
 
 # carai
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/opt/homebrew/bin/nvim
 
 #custom functions
 
@@ -61,7 +63,7 @@ extract () {
            *.tar.bz2)   tar xvjf "$1";;
            *.gz)        gunzip "$1"  ;;
            *.bz2)       bunzip2 "$1" ;;
-           *.rar)       unrar x "$1" ;;
+           *.rar)       unar "$1" ;;
            *.tgz)       tar xvzf "$1";;
            *.tar)       tar xvf "$1" ;;
            *.zip)       unzip "$1"   ;;
@@ -82,6 +84,7 @@ daydiff () {
 # commands alias
 
 alias g='git'
+alias art='php artisan'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -170,3 +173,16 @@ source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-h
 fpath=($fpath "/home/diurno/.zfunctions")
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+
+export LSP_USE_PLISTS=true
+if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+    PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+fi
+
+# bun completions
+[ -s "/Users/lianfernandes/.bun/_bun" ] && source "/Users/lianfernandes/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
