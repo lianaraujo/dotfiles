@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
+local package_path_str = "/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1744318430/share/lua/5.1/?.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1744318430/share/lua/5.1/?/init.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1744318430/lib/luarocks/rocks-5.1/?.lua;/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1744318430/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/lianfernandes/.cache/nvim/packer_hererocks/2.1.1744318430/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -84,21 +84,15 @@ _G.packer_plugins = {
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  conjure = {
+  ["conform.nvim"] = {
     loaded = true,
-    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/conjure",
-    url = "https://github.com/Olical/conjure"
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
   },
-  ["copilot.vim"] = {
+  ["diffview.nvim"] = {
     loaded = true,
-    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
-  gruvbox = {
-    config = { "\27LJ\2\n[\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\24colorscheme gruvbox\24set background=dark\bcmd\bvim\0" },
-    loaded = true,
-    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   harpoon = {
     loaded = true,
@@ -120,10 +114,11 @@ _G.packer_plugins = {
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["null-ls.nvim"] = {
+  modus = {
+    config = { "\27LJ\2\nY\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\22colorscheme modus\24set background=dark\bcmd\bvim\0" },
     loaded = true,
-    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/modus",
+    url = "https://github.com/miikanissi/modus-themes.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -150,6 +145,22 @@ _G.packer_plugins = {
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["octo.nvim"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0" },
+    loaded = true,
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/octo.nvim",
+    url = "https://github.com/pwntester/octo.nvim"
+  },
+  ["oil.nvim"] = {
+    loaded = true,
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
+  },
   orgmode = {
     loaded = true,
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/orgmode",
@@ -165,10 +176,11 @@ _G.packer_plugins = {
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["prettier.nvim"] = {
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0" },
     loaded = true,
-    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -180,6 +192,11 @@ _G.packer_plugins = {
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vgit.nvim"] = {
+    loaded = true,
+    path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/vgit.nvim",
+    url = "https://github.com/tanvirtin/vgit.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/lianfernandes/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -188,10 +205,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gruvbox
-time([[Config for gruvbox]], true)
-try_loadstring("\27LJ\2\n[\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\24colorscheme gruvbox\24set background=dark\bcmd\bvim\0", "config", "gruvbox")
-time([[Config for gruvbox]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
+-- Config for: octo.nvim
+time([[Config for octo.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
+time([[Config for octo.nvim]], false)
+-- Config for: modus
+time([[Config for modus]], true)
+try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\22colorscheme modus\24set background=dark\bcmd\bvim\0", "config", "modus")
+time([[Config for modus]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
